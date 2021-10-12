@@ -1,0 +1,90 @@
+
+{
+    "University":[
+       {
+          "Students":[
+             {"idstudent": "1",
+              "first name": "Leonardo",
+              "lastname": "da Vinci",
+              "nationality": "Italian",
+              "program": "Business Analytics",
+              "courses": {"course": "Data Engineering 1"}
+             },
+             {"idstudent": "2",
+                "first name": "Pablo",
+                "lastname": "Picasso",
+                "nationality": "Spanish",
+                "program": "Business Analytics",
+                "courses": {
+                    "course": [
+                        "Data Engineering 1",
+                        "Coding 1",
+                        "Data Visualization 1"
+                    ]
+                }
+            },
+               {"idstudent": "3",
+                "first name": "Vincent",
+                "lastname": "van Gogh",
+                "nationality": "Dutch",
+                "program": "Finance",
+                "courses": {
+                    "course": [
+                        "Coding 1",
+                        "Data Visualization 1"
+                    ]
+                }
+               }
+        ]
+
+    },
+    {
+        "Programs":[
+           {"idprogram": "1",
+            "program name": "Business Analytics",
+            "admin": "Michael Jordan",
+            "head": "Will Smith",
+            "host city"	: "Budapest"
+           },
+           {"idprograms": "2",
+            "program name": "Finance",
+            "admin": "Kobe Bryant",
+            "head": "Dwayne Johnson",
+            "host city"	: "Budapest"	
+          },
+          {"idprograms": "3",
+            "program name": "Economics",
+            "admin": "Magic Johnson",
+            "head": "Daniel Craig"	,
+            "host city"	: "Vienna"
+          }
+        ]
+    },
+
+  {
+    "Courses":[
+       {"idcourse": "1",
+        "name": "Data Engineering 1",
+        "program": "Business Analytics",
+        "instructors" :{
+            "instructor": [
+              "Agatha Christie",
+              "Danielle Steel"
+            ]
+          }
+       },
+       {"idcourse": "1",
+        "name": "Coding 1",
+        "program": "Business Analytics",
+        "instructors": {"instructor": "Stephen King"}
+       },
+       {"idcourse": "1",
+        "name": "Data Engineering 1",
+        "program": "Data Visualization 1",
+        "instructors": {"instructor": "J. K. Rowling"}
+       }
+    ]
+}
+]
+}
+
