@@ -4,14 +4,14 @@
        {
           "Students":[
              {"idstudent": "1",
-              "first name": "Leonardo",
+              "firstname": "Leonardo",
               "lastname": "da Vinci",
               "nationality": "Italian",
               "program": "Business Analytics",
               "courses": {"course": "Data Engineering 1"}
              },
              {"idstudent": "2",
-                "first name": "Pablo",
+                "firstname": "Pablo",
                 "lastname": "Picasso",
                 "nationality": "Spanish",
                 "program": "Business Analytics",
@@ -24,7 +24,7 @@
                 }
             },
                {"idstudent": "3",
-                "first name": "Vincent",
+                "firstname": "Vincent",
                 "lastname": "van Gogh",
                 "nationality": "Dutch",
                 "program": "Finance",
