@@ -73,12 +73,12 @@
             ]
           }
        },
-       {"idcourse": "1",
+       {"idcourse": "2",
         "name": "Coding 1",
         "program": "Business Analytics",
         "instructors": {"instructor": "Stephen King"}
        },
-       {"idcourse": "1",
+       {"idcourse": "3",
         "name": "Data Engineering 1",
         "program": "Data Visualization 1",
         "instructors": {"instructor": "J. K. Rowling"}
