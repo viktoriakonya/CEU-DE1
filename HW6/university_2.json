@@ -1,0 +1,144 @@
+[
+    {
+        "table": {
+            "tableDetails": [
+                {
+                    "Name": "Students"
+                }
+            ],
+            "headers": [
+                {
+                    "Header1": "idstudent",
+                    "Header2": "firstname",
+                    "Header3": "lastname",
+                    "Header4": "nationality",
+                    "Header5": "program",
+                    "Header6": "courses"
+                }
+            ],
+            "columns": [
+                {
+                    "idstudent": "1",
+                    "firstname": "Leonardo",
+                    "lastname": "da Vinci",
+                    "nationality": "Italian",
+                    "program": "Business Analytics",
+                    "courses": {"course": "Data Engineering 1"}
+                },
+                {
+                    "idstudent": "2",
+                    "firstname": "Pablo",
+                    "lastname": "Picasso",
+                    "nationality": "Spanish",
+                    "program": "Business Analytics",
+                    "courses": {
+                        "course": [
+                            "Data Engineering 1",
+                            "Coding 1",
+                            "Data Visualization 1"
+                        ]
+                    }
+                },
+                {
+                    "idstudent": "3",
+                    "firstname": "Vincent",
+                    "lastname": "van Gogh",
+                    "nationality": "Dutch",
+                    "program": "Finance",
+                    "courses": {
+                        "course": [
+                            "Coding 1",
+                            "Data Visualization 1"
+                        ]
+                    }
+                }
+
+            ]
+        }
+    },
+    {
+        "table": {
+            "tableDetails": [
+                {
+                    "Name": "Programs"
+  
+                }
+            ],
+            "headers": [
+                {
+                    "Header1": "idprogram",
+                    "Header2": "program name",
+                    "Header3": "admin",
+                    "Header4": "head",
+                    "Header5": "host city"
+                }
+            ],
+            "columns": [
+                {
+                    "idprogram": "1",
+                    "program name": "Business Analytics",
+                    "admin": "Michael Jordan",
+                    "head": "Will Smith",
+                    "host city": "Budapest"
+                },
+                {
+                    "idprogram": "2",
+                    "program name": "Finance",
+                    "admin": "Kobe Bryant",
+                    "head": "Dwayne Johnson",
+                    "host city": "Budapest"
+                },
+                {
+                    "idprogram": "3",
+                    "program name": "Economics",
+                    "admin": "Magic Johnson",
+                    "head": "Daniel Craig",
+                    "host city": "Vienna"
+                }
+            ]
+        }
+    },
+    {
+        "table": {
+            "tableDetails": [
+                {
+                    "Name": "Courses"
+  
+                }
+            ],
+            "headers": [
+                {
+                    "Header1": "idcourse",
+                    "Header2": "name",
+                    "Header3": "program",
+                    "Header4": "instructors"
+                }
+            ],
+            "columns": [
+                {
+                    "idcourse": "1",
+                    "name": "Data Engineering 1",
+                    "program": "Business Analytics",
+                    "instructors" :{
+                        "instructor": [
+                          "Agatha Christie",
+                          "Danielle Steel"
+                        ]
+                      }
+                },
+                {
+                    "idcourse": "2",
+                    "name": "Coding 1",
+                    "program": "Business Analytics",
+                    "instructors": {"instructor": "Stephen King"}
+                },
+                {
+                    "idcourse": "3",
+                    "name": "Data Visualization 1",
+                    "program": "Business Analytics",
+                    "instructors": {"instructor": "J. K. Rowling"}
+                }
+            ]
+        }
+    }
+]
