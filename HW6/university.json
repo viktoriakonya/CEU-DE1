@@ -79,8 +79,8 @@
         "instructors": {"instructor": "Stephen King"}
        },
        {"idcourse": "3",
-        "name": "Data Engineering 1",
-        "program": "Data Visualization 1",
+        "name": "Data Visualization 1",
+        "program": "Business Analitics",
         "instructors": {"instructor": "J. K. Rowling"}
        }
     ]
