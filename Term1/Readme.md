@@ -95,7 +95,7 @@ Our analytical questions will cover two areas. Firstly, we would like to answer 
         * Which product had the highest refund rate in the last month of the examined period (2015-03)? 
         * How many days on average passed between the order and the refund issued in the past 3 months (2015-01 - 2015-03)?
         * Which month did the company make the highest margin in 2014?
-    * Let's create a view showing the primary products added to the cart and the cross-sold products on yearly basis after the 4th product release (2014-02-05).
+    * Let's create a yearly updated datamart showing the primary products added to the cart and the cross-sold products on yearly basis after the 4th product release (2014-02-05).
         * Which product was more often put into the cart first in 2014 and in 2015? 
         * Which are the products that were sold together most often?
     
@@ -189,7 +189,7 @@ If we look at the time series of the month end figures, we can see that the refu
 <img  src="https://github.com/viktoriakonya/DE1/blob/main/Term1/Pictures/sales2.JPG">
 When we aggregate the data to monthly level, we can see that 2014-12 had the highest margin in 2014 with 91.857 USD.
     
-#### 2. View showing the primary products added to the cart and cross-sold products by year
+#### 2. Data mart showing the primary products added to the cart and cross-sold products by year
 * Which product was more often put into the cart first in 2014 and in 2015? 
 * Which are the products that were sold together most often?  
     
