@@ -86,24 +86,24 @@ The model file can be found [here](https://github.com/viktoriakonya/DE1/blob/mai
 
 ## Analytical questions
 
-Our analytical questions will cover two areas. Firstly, using the **sales_performance** as source, we would like to answer questions that are typically arises from Sales and Reporting. Secondly, we would like to supply information about the website traffic and paid campaigns from the **website_activity** table which can be used by the Website Management.
+Our analytical questions will cover two areas. Firstly, we would like to answer questions that are typically raised by Sales and Reporting divisions. Secondly, we would like to supply information about the website traffic and paid campaigns which can be used by the Website Management.
 
 1. Sales & Marketing related questions:
-    * Let's create a monthly updated data mart that contains the month end figures (most important sales KPIs) by product after the 4th product relese (2014-02-05). 
+    * Let's create a monthly updated data mart that contains the month end figures (most important sales KPIs) by product after the 4th product release (2014-02-05). 
         * What was the most sold product in the last month of the examined period (2015-03)? 
         * Which product had the highest refund rate in the last month of the examined period (2015-03)? 
         * How many days on average passed between the order and the refund issued in the past 3 months (2015-01 - 2015-03)?
         * Which month did the we make the highest margin in 2014?
-    * Let's create a view showing the primary products added to the cart and cross-sold products on yearly basis after the 4th product relese (2014-02-05).
+    * Let's create a view showing the primary products added to the cart and the cross-sold products on yearly basis after the 4th product release (2014-02-05).
         * Which product was more often put into the cart first in 2014 and in 2015? 
-        * Which are the products that were sold together with the highest sales?
+        * Which are the products that were sold together most often?
     
 2. Website traffic related questions:
-    * Let's create a view which summarizes the sources of paid traffic by UTM source and UTM campaign since the socialbook (desktop targeted) was introduced (2014-08-18).
+    * Let's create a view which summarizes the sources of paid traffic by UTM source and UTM campaign since the socialbook (desktop targeted) campaign was introduced (2014-08-18).
         * Which campaign was the main source of the traffic in 2014 and in 2015? 
         * Was socialbook a successfull campiagn in terms of the proportion of the bounced sessions (proportion of sessions where the user wisited only one website page)?
     * Let's create a weekly updated data mart that we can use to track paid website traffic. 
-	      * Which campaign should we bid up based on the past 3 weeks' traffic information? Shall we differenciate based on the device type? 
+    	* To which campaign should allocate more resources based on the past 3 weeks' traffic information? Shall we differentiate based on the device type? 
         * Which campaign has the highest session to order conversion rate in the last examined week?
     * Let's create a view showing the traffic by landing pages in 2014 and 2015.
         * Which were the top landing pages in 2014 and 2015?
@@ -117,31 +117,30 @@ Our analytical questions will cover two areas. Firstly, using the **sales_perfor
 
 ## Analytical layer and ETL
 
-My e-commerce datawarehouse will consist of two tables. The first, **sales_performance** table will contain product, revenue and refund related information of the items ordered and can mainly used for Sales and Marketing analytics. The second, **website_activity** table will contain session level information mainly focusing on the sources of traffic as well as on the user behaviour and paid campaign performance. I chose to create two separate tables due to the different level of aggregation - the two tables can be later joined by session_id.
+My e-commerce data warehouse will consist of two tables. The first, **sales_performance** table will contain product, revenue and refund related information of the items ordered and can mainly used for Sales and Marketing analytics. The second, **website_activity** table will contain session level information mainly focusing on the sources of traffic as well as on paid campaign performance.
 
-#### sales_performance:
-The analtical data store for the sales related information was created in the **sales_performance** table. The **sales_performance** table contains a denormalized snapshot of the combined order_item, orders, order_items_refund and products tables. The initial creation of the table was embedded in a stored procedure which was executed to create the data store. In order to transfer the information of the new records from the operational tables, after insert trigger was created which is activated when a new insert is executed into the **order_items** table.
+### 1. sales_performance table:
+The analytical data store for the sales related information was created in the **sales_performance** table. The **sales_performance** table contains a denormalized snapshot of the combined **order_item**, **orders**, **order_items_refund** and **products** tables. The initial creation of the table was embedded in a stored procedure which was executed to create the data store. In order to transfer the information of the new records from the operational tables, after insert trigger was created which is activated when a new insert is executed into the **order_items** table.
 
 #### Extract:
-The orders, order_items_refund and products tables from the operational layer were joined to create the **sales_performance** table. **orders** and **products** tables were merged to the **order_items** table by inner join, while **order_items_refunds** table was connected by left join as is contains a subset of the items orederd. Note that **products** table was joined twice, first using the product_id and second time using the product_id of the primary product that was first added to the cart.
+The order_items, orders, order_items_refund and products tables from the operational layer were joined to create the **sales_performance** table. **orders** and **products** tables were merged to the **order_items** table by inner join, while **order_items_refunds** table was connected by left join as is contains a subset of the items ordered. Note that **products** table was joined twice, first using the **product_id** and second time using the **product_id** of the primary product that was first added to the cart.
 
 The following table contains the list of fields of the table:
 
 <img  src="https://github.com/viktoriakonya/DE1/blob/main/Term1/Pictures/analytical1.JPG">
 
 #### Transform:
-For analytical and reporting purposes, the creation of the order date (**created_at**) field was transformed to represent different periodicity (year, month, week, month end, week start date). The identifier of the primary product (**primary_product_id**) and the flag showing is a particular product (**is_primary_product**) was first added to the cart were created using a subquery and then were joined back to the **order_items** table. Also, the product relese date (**product_release_dt**) was transformed to date format from **created_at** filed of the the **products** table. For profitability analysis, the margin (**margin_usd**) was also calculated as the difference of the price and the cogs. In case of refunds, the **is_refunded** flag was added showing if the order was refunded, as well as the **day_diff_order_refund** field which shows that how many days have passed between the order and when the refund was issued.
+For analytical and reporting purposes, the creation of the order date (**created_at**) field was transformed to represent different periodicity (year, month, week, month end, week start date). The identifier of the primary product (**primary_product_id**) and the flag showing if a particular product (**is_primary_product**) was first added to the cart were created using a subquery and then were joined back to the **order_items** table. Also, the product release date (**product_release_dt**) was transformed to date format from **created_at** filed of the the **products** table. For profitability analysis, the margin (**margin_usd**) was also calculated as the difference of the price and the cogs. In case of refunds, the **is_refunded** flag was added showing if the order was refunded, as well as the **day_diff_order_refund** field which shows that how many days have passed between the order and when the refund was issued.
 
 #### Load 
 The CreateOrderInsert() trigger will load a new line to the **sales_performance** table once an insert operation is executed on the **order_items** table. The successful execution of the trigger is logged into the **messages** table with the identifier of the newly inserted order.
 
---- > test
 
-#### website_activity:
-Similar to the **sales_performance** table, the analtical data store for the website traffic related information was created in the **website_activity** table. The **website_activity** table contains a denormalized snapshot of the combined **website_sessions**, **website_pageviews** and **orders** tables. The initial creation of the table was also embedded in a stored procedure which was executed to create the data store. In order to transfer the information of the new records to from the operational table to the **website_activity** table as well, after insert trigger created for the **website_activity** table that is also activated when new insert is executed into the **order_items** table.
+### 2. website_activity table:
+Similar to the **sales_performance** table, the analytical data store for the website traffic related information was created in the **website_activity** table. The **website_activity** table contains a denormalized snapshot of the combined **website_sessions**, **website_pageviews** and **orders** tables. The initial creation of the table was also embedded in a stored procedure which was executed to create the data store. In order to transfer the information of the new records from the operational table to the **website_activity**, after insert trigger was created for the **website_activity** table that is also activated when new insert is executed into the **order_items** table.
 
 #### Extract:
-The **website_sessions**, **website_pageviews** and **orders** tables from the operational layer were joined to create the **website_activity** table. The **website_pageviews** table was first aggregeted to **session_id** level in a subquery, first of all to decrease the size of the table, and second because the exact website pages visited by a customer are  not really relevant from analytical perspective. The aggregated **website_pageviews** and the **orders** tables were then merged to the **website_sessions**  by inner join. 
+The **website_sessions**, **website_pageviews** and **orders** tables from the operational layer were joined to create the **website_activity** table. The **website_pageviews** table was first aggregated to **session_id** level in a subquery, first of all to decrease the size of the table, and second because the exact website pages visited by a customer are not relevant from analytical perspective. The aggregated **website_pageviews** and the **orders** tables were then merged to the **website_sessions**  by inner join. 
 
 The following table contains the list of fields of the table:
 
