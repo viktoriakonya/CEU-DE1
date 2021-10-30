@@ -120,6 +120,8 @@ Our analytical questions will cover two areas. Firstly, we would like to answer 
 
 My e-commerce data warehouse will consist of two tables. The first, **sales_performance** table will contain product, revenue and refund related information of the items ordered and can mainly used for Sales and Marketing analytics. The second, **website_activity** table will contain session level information mainly focusing on the sources of traffic as well as on paid campaign performance.
 
+The code of the analytical layer creation with the triggers can be found [here](https://github.com/viktoriakonya/DE1/blob/main/Term1/Codes/2_Analytical_Data_Layer_creation.sql).
+
 ### 1. sales_performance table:
 The analytical data store for the sales related information was created in the **sales_performance** table. The **sales_performance** table contains a denormalized snapshot of the combined **order_item**, **orders**, **order_items_refund** and **products** tables. The initial creation of the table was embedded in a stored procedure which was executed to create the data store. In order to transfer the information of the new records from the operational tables, after insert trigger was created which is activated when a new insert is executed into the **order_items** table.
 
@@ -149,10 +151,17 @@ The following table contains the list of fields of the table:
 
 
 #### Transform:
-The session creation date **created_at** was transformed to represent different periodicity (year, month, week, month end, week start date). From the aggregeted **website_pageviews** table the following derived fields were added to the table: **lander_page_url** which is the url of the page where the user was landed when he started the session, the **number_of_pages_visited** which shows how many pages were visited by the user in a particular session and the **is_cart_included** which shows if the user has put any products to its cart in the session. From the **orders** table I only added the a flag which shows if the user made a purchase in the session (**is_order_created**).
+The session creation date (**created_at**) was transformed to represent different periodicity (year, month, week, month end, week start date). From the aggregeted **website_pageviews** table the following derived fields were added to the table: **lander_page_url** which is the url of the page where the user was landed when he started the session, the **number_of_pages_visited** which shows how many pages were visited by the user in a particular session and the **is_cart_included** which shows if the user has put any products into its cart in the session. From the **orders** table I only added a flag which shows if the user made a purchase in the session (**is_order_created**).
 
 #### Load 
 The CreateOrderInsertWebsite() trigger will load a new line to the **website_activity** table once an insert operation is executed on the **order_items** table. The successful execution of the trigger is logged into the **messages** table with the identifier of the newly inserted order.
+
+### Test of the execution
+In order to check the successful execution of the after insert triggers, let's check the **messages** table:
+
+<img  src="https://github.com/viktoriakonya/DE1/blob/main/Term1/Pictures/trigger.JPG">
+
+As we can see, the trigger was successfully executed.
 
 <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 <!-- DATA MARTS ------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
