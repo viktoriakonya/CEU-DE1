@@ -218,12 +218,12 @@ Based on the weekly figures, the gsearch nonbrand campaign is contantly the top 
 We can also see that in the gsearch nonbrand campaign, the traffic is unevenly distributed by device type with the desktop targeted generating the vast majorority of the incoming traffic. We can conclude that the gsearch nonbrand desktop targeted campaign should be in the center of our focus.
 Regarding the session to order conversion rates (number of sessions where the user created an order), we can also see that there is a considerable difference based on the device type with an average 10% conversion rate in case of the desktop targeted and below 5% conversion rate in case of the mobile targeted campaign. On the 2015-03-16 week the gsearch brand desktop targeted campaign had the highest conversion rate with 10.7%.
 
-##### View showing the traffic by landing pages in 2014 and 2015.
+#### 5. View showing the traffic by landing pages in 2014 and 2015.
 * Which were the top landing pages in 2014 and 2015?
 	
  <img  src="https://github.com/viktoriakonya/DE1/blob/main/Term1/Pictures/traffic3.JPG"> 
 	
-In 2014 the most users were landed on the /home page while in the first 3 months of 2015 more userd were landed on the /lander-5.
+In 2014 most users were landed on the /home page while in the first 3 months of 2015 more users were landed on the /lander-5.
 	
 	
 	
