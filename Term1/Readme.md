@@ -71,8 +71,8 @@ Finally, if the customer was unsatisfied with the product and issues a refund, i
 
 <img  src="https://github.com/viktoriakonya/DE1/blob/main/Term1/Pictures/tables5.JPG">
 
-
-The code for the Operational layer can be found [here](https://github.com/viktoriakonya/DE1/blob/main/Term1/Codes/1_Operational_Data_Layer_creation.sql).
+\
+The code for the Operational layer can be found [here](https://github.com/viktoriakonya/DE1/blob/main/Term1/Codes/1_Operational_Data_Layer_creation.sql).\
 The model file can be found [here](https://github.com/viktoriakonya/DE1/blob/main/Term1/Codes/ER_diagram.mwb).	
   
 *Technical note*: Because of the size of the datasets, the session timeout limit should might be increased for the execution of the operational layer.
