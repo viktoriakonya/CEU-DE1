@@ -176,10 +176,10 @@ To answer the analytical questions, datamarts and views were created containing 
 The code of the datamarts and views can be found [here](https://github.com/viktoriakonya/DE1/blob/main/Term1/Codes/3_Data_marts_and_views.sql).
     
 #### 1. Data mart showing the month end figures after the 4th product release
-    * What is the most sold product in the last month of the examined period (2015-03)? 
-    * Which product had the highest refund rate in the last month of the examined period (2015-03)? - categorize
-    * How many days on average passes between the order and the refund issued?
-	* Which month did the we make the highest margin in 2014?
+* What is the most sold product in the last month of the examined period (2015-03)? 
+* Which product had the highest refund rate in the last month of the examined period (2015-03)? - categorize
+* How many days on average passes between the order and the refund issued?
+* Which month did the we make the highest margin in 2014?
     
 <img  src="https://github.com/viktoriakonya/DE1/blob/main/Term1/Pictures/sales1.JPG">
 
@@ -188,8 +188,8 @@ If we look at the time seties of the month end figures, we can see that the refu
 When we aggregate the data to monthly level, we can see that 2014-12 had the highest margin in 2014 with 91.857 USD.
     
 #### 2. View showing the primary products added to the cart and cross-sold products by year
-      * Which product was more often put into the cart first in 2014 and in 2015? 
-      * Which are the products that were sold together with the highest sales?  
+* Which product was more often put into the cart first in 2014 and in 2015? 
+* Which are the products that were sold together with the highest sales?  
     
 <img  src="https://github.com/viktoriakonya/DE1/blob/main/Term1/Pictures/sales3.JPG">    
     
@@ -198,8 +198,8 @@ Regarding the tied products, 'The Hudson River mini bear' was most often purchas
 (For this view it was checked in advance that maximum 2 products were in one order in the 2 examined years).
 
 #### 3. View summarizing the sources of paid traffic by UTM source and UTM campaign since the socialbook (desktop targeted) was introduced (2014-08-18).
-	* Which campaign was the main source of the traffic in 2014 and in 2015? 
-	* Was socialbook a successfull campiagn in terms of the proportion of the bounced sessions (proportion of sessions where the user wisited only one website page)?
+* Which campaign was the main source of the traffic in 2014 and in 2015? 
+* Was socialbook a successfull campiagn in terms of the proportion of the bounced sessions (proportion of sessions where the user wisited only one website page)?
 	
  <img  src="https://github.com/viktoriakonya/DE1/blob/main/Term1/Pictures/traffic1.JPG">    
      
@@ -207,8 +207,8 @@ We can see that the gsearch nonbrand campaign brought in the most traffic in bot
 It seems that the socialbook desktop targeted campaign was not an effective campaign as the proportion of the bounced user sessions are considerably higher then in other campaigngs with almost 70% of the users visiting only one website page.
     
  #### 4. Data mart showing the weekly paid website traffic information
-	* Which campaign should we bid up based on the past 3 weeks' traffic information? Shall we differenciate based on the device type? 
-        * Which campaign has the highest session to order conversion rate in the last examined week?
+* Which campaign should we bid up based on the past 3 weeks' traffic information? Shall we differenciate based on the device type? 
+* Which campaign has the highest session to order conversion rate in the last examined week?
     
  <img  src="https://github.com/viktoriakonya/DE1/blob/main/Term1/Pictures/traffic2.JPG"> 
 
@@ -217,7 +217,7 @@ We can also see that in the gsearch nonbrand campaign, the traffic is unevenly d
 Regarding the session to order conversion rates (number of sessions where the user created an order), we can also see that there is considerably difference based on the device type with an average 10% conversion rate in case of the desktop targeted and below 5% conversion rate in case of the mobile targeted campaign. On the 2015-03-16 week the gsearch brand desktop targeted campaign had the highest conversion rate with 10.7%.
 
 ##### View showing the traffic by landing pages in 2014 and 2015.
-	* Which were the top landing pages in 2014 and 2015?
+* Which were the top landing pages in 2014 and 2015?
 	
  <img  src="https://github.com/viktoriakonya/DE1/blob/main/Term1/Pictures/traffic3.JPG"> 
 	
