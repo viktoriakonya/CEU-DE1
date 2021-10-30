@@ -39,35 +39,35 @@ The datasets can be found [here](https://github.com/viktoriakonya/DE1/tree/main/
 ## Operational layer
 
 The data files of the company were first subsetted to include only 2014 and 2015 year information and then loaded to the schema from csv files.
-The creation of the operational layer is included in this script <>.
 
 The following chart shows the ER diagram of the database:
 
 <img height= 400 src="https://github.com/viktoriakonya/DE1/blob/main/Term1/Pictures/ER_Diagram.JPG">
 
-The model file can be found <here>
 
 The **orders** table is the key table as it can be extended with more granular information about both the website activity (**website_sessions**, **website_pageviews**) and the orders (**order_items**, **order_items_refund**, **products**). Later, in the creation of the analytical storage instead of creating one denormalized table by joining all 6 tables I decided to create two tables for the analytical layer, where the first table will focus on the orders and sales related information (**sales_performance**), and the second table will be used to track website traffic (**website_activity**). The main reason for this is that the subject and the content of the tables are easily interpretable and better fits our analysis. The drawback of this approach is that the two tables in the analytical layer need to be combined if we would like to, for example, analyze the profitability of certain online campaigns.
-    
-#### After we executed the operational layer, let's look at each table to better understand the content of them:
 
-When a user enters a session, he is tipically landed on either the home page or on any of the lander pages. When he clicks through the pages, his website activity information is tracked and logged into the **website_pageviews** table. 
+<br/>
+
+After we have executed the operational layer, let's look at each table to better understand the content of them:
+
+When a user enters a session, he is typically landed on either the home page or on any of the lander pages. When he clicks through the pages, his website activity information is tracked and logged into the **website_pageviews** table. 
 
 <img  src="https://github.com/viktoriakonya/DE1/blob/main/Term1/Pictures/tables1.JPG">
 
-His session information is stored in the **website_sessions** table. From the UTM parameters we can see that which paid online campain brought in the user, the type of the campaign and we can also see that what devise was used by the user when he entered the session.
+His session information is stored in the **website_sessions** table. From the UTM parameters we can see that which paid online campain brought in the user, the type of the campaign and we can also see that what device was used by the user when he entered the session.
 
 <img  src="https://github.com/viktoriakonya/DE1/blob/main/Term1/Pictures/tables2.JPG">
 
-From the website_pageviews table we can see that this customer purchased one product. The information of the order is stored in the **orders** table showing that which session generated the order and which user made the purchase.
+From the website_pageviews table we can see that this user purchased one product. The information of the order is stored in the **orders** table showing which session generated the order and which user made the purchase.
 
 <img  src="https://github.com/viktoriakonya/DE1/blob/main/Term1/Pictures/tables3.JPG">
 
-The **order_items** table shows the product level information of the order as well as the revenue ralated information.
+The **order_items** table shows the product level information of the order as well as the revenue related information.
 
 <img  src="https://github.com/viktoriakonya/DE1/blob/main/Term1/Pictures/tables4.JPG">
 
-Finally, if the customer was unsatisfied with the product and issues a refund, it is logged into the **order_item_refunds** table.
+Finally, if the customer was unsatisfied with the product and was issued a refund, it is logged into the **order_item_refunds** table.
 
 <img  src="https://github.com/viktoriakonya/DE1/blob/main/Term1/Pictures/tables5.JPG">
 
