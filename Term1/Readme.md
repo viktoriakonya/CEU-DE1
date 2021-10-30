@@ -222,9 +222,13 @@ According to the figues, socialbook was not an effective campaign as about 70% o
 	
 In 2014 most users were landed on the /home page while in the first 3 months of 2015 more users were landed on the /lander-5.
 	
+/
+
+Finally, let's check the **messages** table again with the logs.
+
+ <img  src="https://github.com/viktoriakonya/DE1/blob/main/Term1/Pictures/log_final.JPG"> 
 	
-	
-	
+We can see that all three scheduled events were executed successfully.	
 	
 	
 	
