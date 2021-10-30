@@ -18,15 +18,15 @@
 
 In my Term 1 project, I am going to use a fictitious e-commerce company's database which is provided by [Maven Analytics](https://www.mavenanalytics.io/course/advanced-mysql-data-analysis). The database contains typical e-commerce records in 6 tables which includes website activity, products and order refund related information.The company sells toys on its website and aims to boost its sellings by running paid online marketing campaigns. At the same time, it collects information about the customers' online activity as well as typical sales related data. In my project, I aim going to create analytical storage and datamarts which can de used to 1) measure the performance of the company's sales and 2) measure and evaluate website activity. In our analysis, we are going to restrict the scope for the 2014 and 2015 years due to the size of the tables.
 
-First, let's take a look a the tables of the database:
-1. **Orders** and **Order_items** tables are the key tables to measure the sales performance of the company. The tables contain information about the items ordered, about the revunues and **Orders** table contains the identifier of the website session in which the customer placed the order.
-2. **Order_items_refunds** table contains the information about customers who complained and issued a refund.
-3. **Products** table contains the list of products of the conpany with the date when they were launched.
+First, let's take a look at the tables of the database:
+1. **Orders** and **Order_items** are the key tables to measure the sales performance of the company. The tables contain information about the items ordered, about the revenues and **Orders** table contains the identifier of the website session in which the customer placed the order.
+2. **Order_items_refunds** table contains the information about customers who complained and were issued a refund.
+3. **Products** table contains the list of products of the company with the date when they were launched.
 4. **Website_sessions** table contains session level information about the sources of the traffic and user behaviour.
-     * The key fields of the table are the UTM (Urchin Tracking Module) parameters which are associated with the user session. These parameters are used to measure the paid marketing activity by adding tracking parameters to the URL. The **utm_source** shows where the traffic is coming from (empty if it is not driven by campaign or the tracking parameter in the URL was forgotten). The **utm_campaign** and the **utm_content** let us know what call-to-action brought in traffic. 
+     * The key fields of the table are the UTM (Urchin Tracking Module) parameters which are associated with the user session. These parameters are used to measure the paid marketing activity by adding tracking parameters to the URL. The **utm_source** shows where the traffic is coming from (empty if it is not driven by paid campaign - so called direct traffic). The **utm_campaign** and the **utm_content** let us know what call-to-action brought in traffic. 
      * The **device_type** captures the type of device that was used by the user in the session. 
      * The **http_referer** shows the referring domain.
-6. **Website_pageviews** table contains the log of pageviews of pages that the user visited when they were at e-commerce website. 
+6. **Website_pageviews** table contains the log of pageviews of pages that the users visited when they were at e-commerce website. 
 
 The datasets can be found [here](https://github.com/viktoriakonya/DE1/tree/main/Term1/Datasets).
 
