@@ -118,7 +118,7 @@ Our analytical questions will cover two areas. Firstly, we would like to answer 
 
 ## Analytical layer and ETL
 
-My e-commerce data warehouse will consist of two tables. The first, **sales_performance** table will contain product, revenue and refund related information of the items ordered and can mainly used for Sales and Marketing analytics. The second, **website_activity** table will contain session level information mainly focusing on the sources of traffic as well as on paid campaign performance.
+The analytical layer will consist of two tables. The first, **sales_performance** table will contain product, revenue and refund related information of the items ordered and can mainly used for Sales and Marketing analytics. The second, **website_activity** table will contain session level information mainly focusing on the sources of traffic as well as on paid campaign performance.
 
 The code of the analytical layer creation with the triggers can be found [here](https://github.com/viktoriakonya/DE1/blob/main/Term1/Codes/2_Analytical_Data_Layer_creation.sql).
 
