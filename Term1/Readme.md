@@ -178,13 +178,14 @@ Also, the code containing the answers to the analytical questions can be found [
 * What is the most sold product in the last month of the examined period (2015-03)? 
 * Which product had the highest refund rate in the last month of the examined period (2015-03)?
 * How many days on average passed between the order and the refund issued?
-* Which month did the company make the highest margin in 2014?
     
 <img  src="https://github.com/viktoriakonya/DE1/blob/main/Term1/Pictures/sales1.JPG">
 
 If we filter for 2015-03 month end then we can see that product 1, 'The Original Mr. Fuzzy' was the most sold product in that month with 865 sales, while the 'Forever Love Bear' had the highest refund rate with 9.8%.
 If we look at the time series of the month end figures, we can see that the refunds were issued around 9 days after the purchase.
 
+* Which month did the company make the highest margin in 2014?
+* 
 <img  src="https://github.com/viktoriakonya/DE1/blob/main/Term1/Pictures/sales2.JPG">
 When we aggregate the data to monthly level, we can see that 2014-12 had the highest margin in 2014 with 91.857 USD.
     
