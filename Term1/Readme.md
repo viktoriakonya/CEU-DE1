@@ -104,7 +104,7 @@ Our analytical questions will cover two areas. Firstly, we would like to answer 
         * Which campaign was the main source of the traffic in 2014 and in 2015? 
         * Was socialbook a successfull campiagn in terms of the proportion of the bounced sessions (proportion of sessions where the user wisited only one website page)?
     * Let's create a weekly updated data mart that we can use to track paid website traffic. 
-    	* To which campaign should allocate more resources based on the past 3 weeks' traffic information? Shall we differentiate based on the device type? 
+    	* To which campaign should  the company allocate more resources based on the past 3 weeks' traffic information? Shall we differentiate based on the device type? 
         * Which campaign has the highest session to order conversion rate in the last examined week?
     * Let's create a view showing the traffic by landing pages in 2014 and 2015.
         * Which were the top landing pages in 2014 and 2015?
@@ -209,14 +209,14 @@ We can see that the gsearch nonbrand campaign brought in the most traffic in bot
 It seems that the socialbook desktop targeted campaign was not an effective campaign as the proportion of the bounced user sessions are considerably higher than in other campaigns with almost 70% of the users visiting only one website page.
     
  #### 4. Data mart showing the weekly paid website traffic information
-* Which campaign should we bid up based on the past 3 weeks' traffic information? Shall we differenciate based on the device type? 
+* To which campaign should the company allocate more resources based on the past 3 weeks' traffic information? Shall we differentiate based on the device type?
 * Which campaign has the highest session to order conversion rate in the last examined week?
     
  <img  src="https://github.com/viktoriakonya/DE1/blob/main/Term1/Pictures/traffic2.JPG"> 
 
 Based on the weekly figures, the gsearch nonbrand campaign is contantly the top source of the traffic.
 We can also see that in the gsearch nonbrand campaign, the traffic is unevenly distributed by device type with the desktop targeted generating the vast majorority of the incoming traffic. We can conclude that the gsearch nonbrand desktop targeted campaign should be in the center of our focus.
-Regarding the session to order conversion rates (number of sessions where the user created an order), we can also see that there is considerably difference based on the device type with an average 10% conversion rate in case of the desktop targeted and below 5% conversion rate in case of the mobile targeted campaign. On the 2015-03-16 week the gsearch brand desktop targeted campaign had the highest conversion rate with 10.7%.
+Regarding the session to order conversion rates (number of sessions where the user created an order), we can also see that there is a considerable difference based on the device type with an average 10% conversion rate in case of the desktop targeted and below 5% conversion rate in case of the mobile targeted campaign. On the 2015-03-16 week the gsearch brand desktop targeted campaign had the highest conversion rate with 10.7%.
 
 ##### View showing the traffic by landing pages in 2014 and 2015.
 * Which were the top landing pages in 2014 and 2015?
