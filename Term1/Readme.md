@@ -5,7 +5,7 @@
 2. [Operational layer](#Operational_layer)  
 3. [Analytical questions](#Analytical_questions)  
 4. [Analytical layer and ETL](#Analytical_layer_and_ETL)  
-5. [Data marts and views](#Data_marts_and_views)  
+5. [Data marts and Analytics](#Data_marts_and_analytics)  
 
 
 
@@ -165,13 +165,14 @@ As we can see, the trigger was successfully executed.
 <!-- DATA MARTS ------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
 <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
-<a name="Data_marts_and_views"/>
+<a name="Data_marts_and_analytics"/>
 
-## Data marts and views
+## Data marts and Analytics
     
-To answer the analytical questions, datamarts and views were created containing aggregated information and / or subsets of the data storage which can be used to supply information for certain divisions of the company, such as reporting. The data marts were created with scheduled events with different periodicity (monthly, weekly). For testing purposes the execution of the events were scheduled starting from the current timestamp.
+To answer the analytical questions, three datamarts were created containing aggregated information and / or subsets of the data storage which can be used to supply information for certain divisions of the company, such as reporting. The data marts were created with scheduled events with different periodicity (yearly, monthly, weekly). For testing purposes the execution of the events were scheduled starting from the current timestamp.
 
 The code of the datamarts and views can be found [here](https://github.com/viktoriakonya/DE1/blob/main/Term1/Codes/3_Data_marts_and_views.sql).
+Also, the code containing the answers to the analytical questions can be found [here]()
     
 #### 1. Data mart showing the month end figures after the 4th product release
 * What is the most sold product in the last month of the examined period (2015-03)? 
