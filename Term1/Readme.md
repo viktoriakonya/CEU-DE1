@@ -184,7 +184,7 @@ If we filter for 2015-03 month end then we can see that product 1, 'The Original
 If we look at the time series of the month end figures, we can see that the refunds were issued around 9 days after the purchase.
 
 * Which month did the company make the highest margin in 2014?
-* 
+
 <img  src="https://github.com/viktoriakonya/DE1/blob/main/Term1/Pictures/sales2.JPG">
 When we aggregate the data to monthly level, we can see that 2014-12 had the highest margin in 2014 with 91.857 USD.
     
@@ -200,6 +200,8 @@ Regarding the tied products, 'The Hudson River mini bear' was most often purchas
 
  #### 3. Data mart showing the weekly paid website traffic and bounced session information since the socialbook (desktop targeted) was introduced (2014-08-18).
 * To which campaign should the company allocate more resources based on the past 3 weeks' traffic information? Shall we differentiate based on the device type?
+
+
 * Which campaign has the highest session to order conversion rate in the last examined week?
 * Was socialbook a successful campaign in terms of the proportion of the bounced sessions (proportion of sessions where the user visited only one website page)?    
  <img  src="https://github.com/viktoriakonya/DE1/blob/main/Term1/Pictures/traffic2.JPG"> 
