@@ -171,7 +171,7 @@ As we can see, the trigger was successfully executed.
 
 ## Data marts and views
     
-To answer the analytical questions, datamarts were created containing aggregated information and / or subsets of the data storage which can be used to supply information for certain divisions of the company, such as reporting. The data marts were created with scheduled eventswith different periodicity (for testing purposes the events were scheduled for the next miunute)
+To answer the analytical questions, datamarts and views were created containing aggregated information and / or subsets of the data storage which can be used to supply information for certain divisions of the company, such as reporting. The data marts were created with scheduled events with different periodicity (monthly, weekly). For testing purposes the execution of the events were scheduled starting from the current timestamp.
 
 The code of the datamarts can be found here: <>
     
