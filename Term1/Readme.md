@@ -200,15 +200,20 @@ Regarding the tied products, 'The Hudson River mini bear' was most often purchas
 
  #### 3. Data mart showing the weekly paid website traffic and bounced session information since the socialbook (desktop targeted) was introduced (2014-08-18).
 * To which campaign should the company allocate more resources based on the past 3 weeks' traffic information? Shall we differentiate based on the device type?
-
-
 * Which campaign has the highest session to order conversion rate in the last examined week?
-* Was socialbook a successful campaign in terms of the proportion of the bounced sessions (proportion of sessions where the user visited only one website page)?    
- <img  src="https://github.com/viktoriakonya/DE1/blob/main/Term1/Pictures/traffic2.JPG"> 
 
-Based on the weekly figures, the gsearch nonbrand campaign is contantly the top source of the traffic.
+ <img  src="https://github.com/viktoriakonya/DE1/blob/main/Term1/Pictures/traffic2.JPG"> 
+ 
+ Based on the weekly figures, the gsearch nonbrand campaign is contantly the top source of the traffic.
 We can also see that in the gsearch nonbrand campaign, the traffic is unevenly distributed by device type with the desktop targeted generating the vast majorority of the incoming traffic. We can conclude that the gsearch nonbrand desktop targeted campaign should be in the center of our focus.
 Regarding the session to order conversion rates (number of sessions where the user created an order), we can also see that there is a considerable difference based on the device type with an average 10% conversion rate in case of the desktop targeted and below 5% conversion rate in case of the mobile targeted campaign. On the 2015-03-16 week the gsearch brand desktop targeted campaign had the highest conversion rate with 10.7%.
+
+* Was socialbook a successful campaign in terms of the proportion of the bounced sessions (proportion of sessions where the user visited only one website page)?    
+
+ <img  src="https://github.com/viktoriakonya/DE1/blob/main/Term1/Pictures/traffic4.JPG"> 
+
+According to the figues, socialbook was not an effective campaign as about 70% of the users landed on the website only visited one page.
+
 
 #### 4. View showing the traffic by landing pages in 2014 and 2015.
 * Which were the top landing pages in 2014 and 2015?
