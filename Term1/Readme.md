@@ -94,7 +94,7 @@ Our analytical questions will cover two areas. Firstly, we would like to answer 
         * What was the most sold product in the last month of the examined period (2015-03)? 
         * Which product had the highest refund rate in the last month of the examined period (2015-03)? 
         * How many days on average passed between the order and the refund issued in the past 3 months (2015-01 - 2015-03)?
-        * Which month did the we make the highest margin in 2014?
+        * Which month did the company make the highest margin in 2014?
     * Let's create a view showing the primary products added to the cart and the cross-sold products on yearly basis after the 4th product release (2014-02-05).
         * Which product was more often put into the cart first in 2014 and in 2015? 
         * Which are the products that were sold together most often?
@@ -177,34 +177,36 @@ The code of the datamarts and views can be found [here](https://github.com/vikto
     
 #### 1. Data mart showing the month end figures after the 4th product release
 * What is the most sold product in the last month of the examined period (2015-03)? 
-* Which product had the highest refund rate in the last month of the examined period (2015-03)? - categorize
-* How many days on average passes between the order and the refund issued?
-* Which month did the we make the highest margin in 2014?
+* Which product had the highest refund rate in the last month of the examined period (2015-03)?
+* How many days on average passed between the order and the refund issued?
+* Which month did the company make the highest margin in 2014?
     
 <img  src="https://github.com/viktoriakonya/DE1/blob/main/Term1/Pictures/sales1.JPG">
 
 If we filter for 2015-03 month end then we can see that product 1, 'The Original Mr. Fuzzy' was the most sold product in that month with 865 sales, while the 'Forever Love Bear' had the highest refund rate with 9.8%.
-If we look at the time seties of the month end figures, we can see that the refuds are issued around 9 days after the purchase.
+If we look at the time series of the month end figures, we can see that the refunds were issued around 9 days after the purchase.
+
+<img  src="https://github.com/viktoriakonya/DE1/blob/main/Term1/Pictures/sales2.JPG">
 When we aggregate the data to monthly level, we can see that 2014-12 had the highest margin in 2014 with 91.857 USD.
     
 #### 2. View showing the primary products added to the cart and cross-sold products by year
 * Which product was more often put into the cart first in 2014 and in 2015? 
-* Which are the products that were sold together with the highest sales?  
+* Which are the products that were sold together most often?  
     
 <img  src="https://github.com/viktoriakonya/DE1/blob/main/Term1/Pictures/sales3.JPG">    
     
 We can see that product 1, 'The Original Mr. Fuzzy' was most often added to the cart first in both 2014 and in the first 3 months of 2015 with 6934 and 1989 sales respectively.
-Regarding the tied products, 'The Hudson River mini bear' was most often purchased together with the 'The Original Mr. Fuzzy' first taken to the cart.
-(For this view it was checked in advance that maximum 2 products were in one order in the 2 examined years).
+Regarding the tied products, 'The Hudson River mini bear' was most often purchased together with the 'The Original Mr. Fuzzy'.
+(Before the creation of this view it was checked in advance that maximum 2 products were in one order in the 2 examined years).
 
 #### 3. View summarizing the sources of paid traffic by UTM source and UTM campaign since the socialbook (desktop targeted) was introduced (2014-08-18).
 * Which campaign was the main source of the traffic in 2014 and in 2015? 
-* Was socialbook a successfull campiagn in terms of the proportion of the bounced sessions (proportion of sessions where the user wisited only one website page)?
+* Was socialbook a successful campaign in terms of the proportion of the bounced sessions (proportion of sessions where the user visited only one website page)?
 	
  <img  src="https://github.com/viktoriakonya/DE1/blob/main/Term1/Pictures/traffic1.JPG">    
      
 We can see that the gsearch nonbrand campaign brought in the most traffic in both years. 
-It seems that the socialbook desktop targeted campaign was not an effective campaign as the proportion of the bounced user sessions are considerably higher then in other campaigngs with almost 70% of the users visiting only one website page.
+It seems that the socialbook desktop targeted campaign was not an effective campaign as the proportion of the bounced user sessions are considerably higher than in other campaigns with almost 70% of the users visiting only one website page.
     
  #### 4. Data mart showing the weekly paid website traffic information
 * Which campaign should we bid up based on the past 3 weeks' traffic information? Shall we differenciate based on the device type? 
